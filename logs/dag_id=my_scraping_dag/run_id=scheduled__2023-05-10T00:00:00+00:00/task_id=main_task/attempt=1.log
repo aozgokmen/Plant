@@ -1,0 +1,229 @@
+[2023-12-07T14:52:27.233+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T14:52:27.238+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T14:52:27.239+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T14:52:27.247+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T14:52:27.250+0000] {standard_task_runner.py:57} INFO - Started process 1025 to run task
+[2023-12-07T14:52:27.252+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '240', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpup3o3k14']
+[2023-12-07T14:52:27.254+0000] {standard_task_runner.py:85} INFO - Job 240: Subtask main_task
+[2023-12-07T14:52:27.280+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T14:52:27.316+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T14:52:27.317+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/configparser.py", line 846, in items
+    d.update(self._sections[section])
+KeyError: 'web'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 61, in main
+    config = get_config('web')
+  File "/opt/airflow/dags/main.py", line 23, in get_config
+    return {key: value for key, value in parser.items(section)}
+  File "/usr/local/lib/python3.8/configparser.py", line 849, in items
+    raise NoSectionError(section)
+configparser.NoSectionError: No section: 'web'
+[2023-12-07T14:52:27.321+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T145227, end_date=20231207T145227
+[2023-12-07T14:52:27.325+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 240 for task main_task (No section: 'web'; 1025)
+[2023-12-07T14:52:27.345+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T14:52:27.358+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T16:32:23.418+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T16:32:23.434+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T16:32:23.436+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T16:32:23.460+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T16:32:23.464+0000] {standard_task_runner.py:57} INFO - Started process 3800 to run task
+[2023-12-07T16:32:23.467+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '718', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpaav92_fz']
+[2023-12-07T16:32:23.470+0000] {standard_task_runner.py:85} INFO - Job 718: Subtask main_task
+[2023-12-07T16:32:23.506+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T16:32:23.541+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T16:32:23.542+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/configparser.py", line 846, in items
+    d.update(self._sections[section])
+KeyError: 'web'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 60, in main
+    config = get_config('web')
+  File "/opt/airflow/dags/main.py", line 22, in get_config
+    return {key: value for key, value in parser.items(section)}
+  File "/usr/local/lib/python3.8/configparser.py", line 849, in items
+    raise NoSectionError(section)
+configparser.NoSectionError: No section: 'web'
+[2023-12-07T16:32:23.554+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T163223, end_date=20231207T163223
+[2023-12-07T16:32:23.561+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 718 for task main_task (No section: 'web'; 3800)
+[2023-12-07T16:32:23.600+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T16:32:23.630+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T16:41:39.963+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T16:41:39.967+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T16:41:39.967+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T16:41:39.974+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T16:41:39.977+0000] {standard_task_runner.py:57} INFO - Started process 4703 to run task
+[2023-12-07T16:41:39.981+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '1060', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp9b2nm8uv']
+[2023-12-07T16:41:39.983+0000] {standard_task_runner.py:85} INFO - Job 1060: Subtask main_task
+[2023-12-07T16:41:40.013+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T16:41:40.048+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T16:41:40.048+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/configparser.py", line 846, in items
+    d.update(self._sections[section])
+KeyError: 'web'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 60, in main
+    config = get_config('web')
+  File "/opt/airflow/dags/main.py", line 22, in get_config
+    return {key: value for key, value in parser.items(section)}
+  File "/usr/local/lib/python3.8/configparser.py", line 849, in items
+    raise NoSectionError(section)
+configparser.NoSectionError: No section: 'web'
+[2023-12-07T16:41:40.053+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T164139, end_date=20231207T164140
+[2023-12-07T16:41:40.058+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1060 for task main_task (No section: 'web'; 4703)
+[2023-12-07T16:41:40.074+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T16:41:40.087+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:00:43.724+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:00:43.728+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:00:43.729+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:00:43.758+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T17:00:43.763+0000] {standard_task_runner.py:57} INFO - Started process 5885 to run task
+[2023-12-07T17:00:43.767+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '1413', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpb96s_77_']
+[2023-12-07T17:00:43.771+0000] {standard_task_runner.py:85} INFO - Job 1413: Subtask main_task
+[2023-12-07T17:00:43.817+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:00:43.904+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T17:00:43.943+0000] {logging_mixin.py:154} INFO - base_url: https://tuncbotanik.com
+[2023-12-07T17:00:43.948+0000] {python.py:194} INFO - Done. Returned value was: ('https://tuncbotanik.com', {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', 'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7'}, {'dbname': 'plant', 'user': 'aozgokme', 'password': '***', 'host': 'localhost', 'port': '5432'})
+[2023-12-07T17:00:43.977+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T170043, end_date=20231207T170043
+[2023-12-07T17:00:44.018+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-07T17:00:44.054+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:03:58.716+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:03:58.722+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:03:58.722+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:03:58.729+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T17:03:58.732+0000] {standard_task_runner.py:57} INFO - Started process 7321 to run task
+[2023-12-07T17:03:58.734+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '2097', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp8ubpb344']
+[2023-12-07T17:03:58.736+0000] {standard_task_runner.py:85} INFO - Job 2097: Subtask main_task
+[2023-12-07T17:03:58.771+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:03:58.828+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T17:03:58.866+0000] {logging_mixin.py:154} INFO - base_url: https://tuncbotanik.com
+[2023-12-07T17:03:58.867+0000] {python.py:194} INFO - Done. Returned value was: ('https://tuncbotanik.com', {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', 'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7'}, {'dbname': 'plant', 'user': 'aozgokme', 'password': '***', 'host': 'localhost', 'port': '5432'})
+[2023-12-07T17:03:58.889+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T170358, end_date=20231207T170358
+[2023-12-07T17:03:58.907+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-07T17:03:58.932+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:18:44.432+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:18:44.437+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:18:44.437+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:18:44.461+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T17:18:44.464+0000] {standard_task_runner.py:57} INFO - Started process 8807 to run task
+[2023-12-07T17:18:44.466+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '2659', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpt80fg49u']
+[2023-12-07T17:18:44.468+0000] {standard_task_runner.py:85} INFO - Job 2659: Subtask main_task
+[2023-12-07T17:18:44.495+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:18:44.540+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T17:18:45.306+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 80, in main
+    insert_data_to_db(products, db_params)
+  File "/opt/airflow/dags/main.py", line 43, in insert_data_to_db
+    with psycopg2.connect(**db_params) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-12-07T17:18:45.311+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T171844, end_date=20231207T171845
+[2023-12-07T17:18:45.316+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 2659 for task main_task (connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+; 8807)
+[2023-12-07T17:18:45.328+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T17:18:45.338+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:23:03.475+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:23:03.480+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:23:03.481+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:23:03.498+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T17:23:03.503+0000] {standard_task_runner.py:57} INFO - Started process 9609 to run task
+[2023-12-07T17:23:03.509+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '3001', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp_rurq6to']
+[2023-12-07T17:23:03.511+0000] {standard_task_runner.py:85} INFO - Job 3001: Subtask main_task
+[2023-12-07T17:23:03.563+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:23:03.625+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T17:23:04.435+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 73, in main
+    insert_data_to_db(products, db_params)
+  File "/opt/airflow/dags/main.py", line 40, in insert_data_to_db
+    with psycopg2.connect(**db_params) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-12-07T17:23:04.443+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T172303, end_date=20231207T172304
+[2023-12-07T17:23:04.450+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 3001 for task main_task (connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+; 9609)
+[2023-12-07T17:23:04.486+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T17:23:04.496+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:28:45.846+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:28:45.853+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [queued]>
+[2023-12-07T17:28:45.853+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:28:45.859+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): main_task> on 2023-05-10 00:00:00+00:00
+[2023-12-07T17:28:45.862+0000] {standard_task_runner.py:57} INFO - Started process 10445 to run task
+[2023-12-07T17:28:45.865+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'main_task', 'scheduled__2023-05-10T00:00:00+00:00', '--job-id', '3343', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpupezkotj']
+[2023-12-07T17:28:45.867+0000] {standard_task_runner.py:85} INFO - Job 3343: Subtask main_task
+[2023-12-07T17:28:45.893+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.main_task scheduled__2023-05-10T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:28:45.942+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='main_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-10T00:00:00+00:00'
+[2023-12-07T17:28:46.676+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 73, in main
+    insert_data_to_db(products, db_params)
+  File "/opt/airflow/dags/main.py", line 40, in insert_data_to_db
+    with psycopg2.connect(**db_params) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-12-07T17:28:46.688+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=main_task, execution_date=20230510T000000, start_date=20231207T172845, end_date=20231207T172846
+[2023-12-07T17:28:46.735+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 3343 for task main_task (connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+; 10445)
+[2023-12-07T17:28:46.760+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T17:28:46.769+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

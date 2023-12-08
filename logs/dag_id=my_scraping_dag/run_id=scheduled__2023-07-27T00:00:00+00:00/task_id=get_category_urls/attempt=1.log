@@ -1,0 +1,72 @@
+[2023-12-07T17:01:08.338+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [queued]>
+[2023-12-07T17:01:08.345+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [queued]>
+[2023-12-07T17:01:08.345+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:01:08.365+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_category_urls> on 2023-07-27 00:00:00+00:00
+[2023-12-07T17:01:08.370+0000] {standard_task_runner.py:57} INFO - Started process 6231 to run task
+[2023-12-07T17:01:08.372+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'get_category_urls', 'scheduled__2023-07-27T00:00:00+00:00', '--job-id', '1581', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp5jolzya5']
+[2023-12-07T17:01:08.375+0000] {standard_task_runner.py:85} INFO - Job 1581: Subtask get_category_urls
+[2023-12-07T17:01:08.418+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:01:08.482+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='get_category_urls' AIRFLOW_CTX_EXECUTION_DATE='2023-07-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-07-27T00:00:00+00:00'
+[2023-12-07T17:01:08.484+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 46, in get_category_urls
+    soup = get_soup(base_url, headers)
+  File "/opt/airflow/dags/main.py", line 41, in get_soup
+    response = requests.get(url, headers=headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 489, in prepare_headers
+    for header in headers.items():
+AttributeError: 'str' object has no attribute 'items'
+[2023-12-07T17:01:08.492+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=get_category_urls, execution_date=20230727T000000, start_date=20231207T170108, end_date=20231207T170108
+[2023-12-07T17:01:08.500+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1581 for task get_category_urls ('str' object has no attribute 'items'; 6231)
+[2023-12-07T17:01:08.512+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T17:01:08.526+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-07T17:04:24.397+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [queued]>
+[2023-12-07T17:04:24.401+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [queued]>
+[2023-12-07T17:04:24.401+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-07T17:04:24.406+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_category_urls> on 2023-07-27 00:00:00+00:00
+[2023-12-07T17:04:24.408+0000] {standard_task_runner.py:57} INFO - Started process 7660 to run task
+[2023-12-07T17:04:24.410+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_scraping_dag', 'get_category_urls', 'scheduled__2023-07-27T00:00:00+00:00', '--job-id', '2262', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpvlfkcij0']
+[2023-12-07T17:04:24.412+0000] {standard_task_runner.py:85} INFO - Job 2262: Subtask get_category_urls
+[2023-12-07T17:04:24.434+0000] {task_command.py:416} INFO - Running <TaskInstance: my_scraping_dag.get_category_urls scheduled__2023-07-27T00:00:00+00:00 [running]> on host 63b0c7e341c0
+[2023-12-07T17:04:24.473+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_scraping_dag' AIRFLOW_CTX_TASK_ID='get_category_urls' AIRFLOW_CTX_EXECUTION_DATE='2023-07-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-07-27T00:00:00+00:00'
+[2023-12-07T17:04:24.474+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/main.py", line 46, in get_category_urls
+    soup = get_soup(base_url, headers)
+  File "/opt/airflow/dags/main.py", line 41, in get_soup
+    response = requests.get(base_url, headers=headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 489, in prepare_headers
+    for header in headers.items():
+AttributeError: 'str' object has no attribute 'items'
+[2023-12-07T17:04:24.478+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=my_scraping_dag, task_id=get_category_urls, execution_date=20230727T000000, start_date=20231207T170424, end_date=20231207T170424
+[2023-12-07T17:04:24.482+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 2262 for task get_category_urls ('str' object has no attribute 'items'; 7660)
+[2023-12-07T17:04:24.505+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-07T17:04:24.516+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -34,3 +34,5 @@ Once activated through the Airflow interface, the DAG will automatically run dai
 
 If you wish to contribute to the project, please submit pull requests or report issues.
 
+<img width="1505" alt="image" src="https://github.com/aozgokmen/plant/assets/74674469/13803f40-962a-4773-8cc0-92cc43d94c34">
+

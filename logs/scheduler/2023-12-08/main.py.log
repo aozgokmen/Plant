@@ -1622,3 +1622,73 @@
 [2023-12-08T13:06:24.201+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:06:24.201+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2023-12-08T13:06:24.211+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:06:24.211+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
 [2023-12-08T13:06:24.219+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.103 seconds
+[2023-12-08T13:06:54.521+0000] {processor.py:157} INFO - Started process (PID=1464) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:06:54.523+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:06:54.524+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:06:54.523+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:06:54.586+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:06:54.598+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:06:54.598+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:06:54.608+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:06:54.608+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:06:54.615+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.098 seconds
+[2023-12-08T13:07:24.860+0000] {processor.py:157} INFO - Started process (PID=1476) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:07:24.862+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:07:24.863+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:24.862+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:07:24.931+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:07:24.944+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:24.944+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:07:24.955+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:24.955+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:07:25.074+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.220 seconds
+[2023-12-08T13:07:55.219+0000] {processor.py:157} INFO - Started process (PID=1488) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:07:55.220+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:07:55.222+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:55.221+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:07:55.293+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:07:55.309+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:55.308+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:07:55.319+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:07:55.319+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:07:55.326+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.111 seconds
+[2023-12-08T13:08:25.654+0000] {processor.py:157} INFO - Started process (PID=1500) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:08:25.655+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:08:25.656+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:25.656+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:08:25.719+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:08:25.731+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:25.731+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:08:25.741+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:25.741+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:08:25.747+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.099 seconds
+[2023-12-08T13:08:55.968+0000] {processor.py:157} INFO - Started process (PID=1512) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:08:55.969+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:08:55.970+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:55.969+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:08:56.025+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:08:56.038+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:56.038+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:08:56.049+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:08:56.049+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:08:56.057+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.091 seconds
+[2023-12-08T13:09:26.408+0000] {processor.py:157} INFO - Started process (PID=1524) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:09:26.409+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:09:26.411+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:26.411+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:09:26.475+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:09:26.489+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:26.489+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:09:26.502+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:26.502+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:09:26.706+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.303 seconds
+[2023-12-08T13:09:57.062+0000] {processor.py:157} INFO - Started process (PID=1536) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:09:57.063+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:09:57.064+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:57.064+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:09:57.127+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:09:57.140+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:57.139+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:09:57.150+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:09:57.150+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:09:57.156+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.102 seconds
+[2023-12-08T13:10:27.411+0000] {processor.py:157} INFO - Started process (PID=1548) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:10:27.413+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:10:27.414+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:27.414+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:10:27.483+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:10:27.498+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:27.498+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:10:27.510+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:27.509+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:10:27.518+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.111 seconds
+[2023-12-08T13:10:57.750+0000] {processor.py:157} INFO - Started process (PID=1560) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:10:57.751+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:10:57.752+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:57.752+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:10:57.819+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:10:57.836+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:57.836+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:10:57.848+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:10:57.848+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:10:57.856+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.113 seconds
+[2023-12-08T13:11:28.050+0000] {processor.py:157} INFO - Started process (PID=1572) to work on /opt/airflow/dags/main.py
+[2023-12-08T13:11:28.051+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2023-12-08T13:11:28.051+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:11:28.051+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2023-12-08T13:11:28.104+0000] {processor.py:839} INFO - DAG(s) dict_keys(['my_scraping_dag']) retrieved from /opt/airflow/dags/main.py
+[2023-12-08T13:11:28.116+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:11:28.116+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-12-08T13:11:28.127+0000] {logging_mixin.py:154} INFO - [2023-12-08T13:11:28.127+0000] {dag.py:3722} INFO - Setting next_dagrun for my_scraping_dag to 2023-12-08T00:00:00+00:00, run_after=2023-12-09T00:00:00+00:00
+[2023-12-08T13:11:28.250+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/main.py took 0.203 seconds

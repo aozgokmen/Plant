@@ -45,19 +45,18 @@ def insert_data_to_db(data, postgres_conn_id='postgres_conn'):
     
     for product in data:
         cursor.execute("""
-            INSERT INTO plant.products (category, title, price, supplier, date_check) 
-            VALUES (%s, %s, %s, %s, %s)
+            INSERT INTO plant.products (category, title, price, supplier) 
+            VALUES (%s, %s, %s, %s)
             ON CONFLICT (title, supplier) 
             DO UPDATE SET 
                 category = EXCLUDED.category,
-                price = EXCLUDED.price,
-                date_check = EXCLUDED.date_check;
-            """, (product['Category'], product['Title'], product['Price'], product['Supplier'], datetime.datetime.now()))
+                price = EXCLUDED.price;
+            """, (product['Category'], product['Title'], product['Price'], product['Supplier']))
     conn.commit()
     cursor.close()
     conn.close()
 
-dag = DAG('my_scraping_dag', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('my_scraping_dag', default_args=default_args, schedule_interval=None)
 
 def main(**kwargs):
     """Main function to orchestrate tasks."""
@@ -67,12 +66,17 @@ def main(**kwargs):
         'Accept-Language': Variable.get('accept_language'),
     }
     category_urls = get_category_urls(base_url, headers)
-    print(category_urls)
-    for url in category_urls:
-        products = get_products(url, headers)
-        print(products)
-        insert_data_to_db(products, postgres_conn_id='postgres_conn')
-        print("Data inserted to DB")
+    all_products = []
+    for category_url in category_urls:
+        page = 1
+        while True:
+            full_url = f"{category_url}?pg={page}&s=1&o=0&ps=12"
+            print(full_url) 
+            products = get_products(full_url, headers)
+            if not products:
+                break  
+            all_products.extend(products)
+            page += 1
 
 main_task = PythonOperator(
     task_id='main_task',
